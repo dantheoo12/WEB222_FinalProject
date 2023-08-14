@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+/*General*/
+body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+    background-color:#b0c4de;
+    text-align: center;
+    font-family: 'Didact Gothic', sans-serif;
+}
+#my-name {
+    font-size: 3em;
+    margin: 0px auto;
+}
+#self-photo {
+    width: 20vw;
+    border-radius: 5px;
+    margin: 20px auto 0px;
+}
+#job-titles {
+    margin: 0px auto 2vh;
+}
+button {
+  background-color: #3c4856;
+  border-radius: 8px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  height: 40px;
+  margin: 0;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+}
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+  background-color: #758aa1;
+}
+@media only screen and (max-width: 400px) {
+    body {
+        max-width: 95%;
+    }
+    #my-name{
+        font-size: 2em;
+    }
+    #self-photo {
+        width: 70vw;
+    }
+}
+
+/* About me and Basic Info */
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    gap: 0px 100px;
+    padding: 10px 10px 10px;
+    background-color: #a0acbd;
+    margin: 20px 5vw;
+    border-radius: 5px;
+}
+#about h3 {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 1vh;
+    text-decoration: solid grey underline;
+}
+
+#basic-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+#basic-info h3 {
+    grid-column: 1 / span 2;
+    justify-self: start;
+}
+#basic-info p {
+    padding: 1px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+}
+@media only screen and (max-width: 400px) {
+    #about {
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    #about h3 {
+        font-size: 12pt;
+    }
+    #about p,
+    #about article,
+    #about span {
+        font-size: 10pt;
+    }
+}
+
+/* Education cards */
+.education-card {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    background-color: #e3f1ef;
+    margin: 1vw 15vw;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px darkgrey;
+}
+.education-left {
+    display: grid;
+    grid-template-rows: 2;
+    background-color: #334b48;
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.education-right {
+    margin: auto;
+}
+.education-years p {
+    font-size: 10pt;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+.education-type h4 {
+    padding: 0px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+@media only screen and (max-width: 400px) {
+    .education-card{
+        margin: 1vh auto;
+        grid-template-columns: 1fr 2fr;
+    }
+    .education-years p {
+        font-size: 10pt;
+    }
+    .education-type h4 {
+        font-size: 12pt;
+    }
+    .education-right {
+        font-size: 10pt;
+    }
+}
+
+/* Contact Me form */
+#contact-form {
+    background-color: #76b6d0;
+    padding: 5px;
+    margin: 1vh 10vw;
+    border-radius: 5px;
+    align-items: center;
+}
+form {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-gap: 10px;
+}
+form label {
+    align-self: center;
+}
+#contact-form h2 {
+    margin: 1vh auto;
+    padding: 0px;
+}
+form h3 {
+    grid-column: 1 / span 3;
+    margin: 1vh auto;
+}
+form label {
+    justify-self: right;
+}
+#contact-reasons {
+    grid-column: 1 / span 3;
+}
+#submit-reset-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+input[type="radio"] {
+    margin: 0px 2px;
+}
+input[type="submit"],
+input[type="reset"] {
+    background-color: #554148;
+    border-radius: 8px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 40px;
+    margin: 0 4vw;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    transition: color 100ms;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #8b747c;
+}
+@media only screen and (max-width: 400px) {
+    #contact-form {
+        margin: 5vh auto;
+    }
+    form {
+        grid-template-columns: 0.3fr 1fr 0.3fr;
+    }
+    form label {
+        font-size: 10pt;
+    }
+    input {
+        font-size: 10pt;
+    }
+}

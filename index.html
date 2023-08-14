@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/styles.css">
+        <meta name="author" content="Daniel Jung">
+    </head>
+    <body>
+        <img id="self-photo" src="./assets/me.jpg" title="This is me">
+        <h1 id="my-name">Daniel Jung</h1>
+        <p id="job-titles">Web/App Developer</p>
+        <button id="resume-button"><a href="./assets/Resume - Daniel Jung.pdf" download>Resume &#x2913;</a></button>
+        <button id="contact-me">Contact Me</button>
+
+        <!--About and Basic Information card-->
+        <div id="about">
+            <div id="about-and-honesty">
+                <h3>About Me and Academic Honesty</h3>
+                <article>
+                    <i>
+                        I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy.
+                        No part of this assessment has been copied manually or electronically from any other source
+                        (including web sites) except for the information supplied by the WEB222 instructors and / or
+                        made available in this assessment for my use. I also declare that no part of this assignment has
+                        been distributed to other students.
+                        <br><br>
+                    </i>
+                     <b>Date:</b> <span>August 18, 2023</span>
+                </article>
+            </div>
+            <div id="basic-info">
+                <h3>Basic Information</h3>
+                <p>AGE</p>
+                <p><i>26</i></p>
+                <p>EMAIL</p>
+                <p><i>djung1@myseneca.ca</i></p>
+                <p>LANGUAGE</p>
+                <p><i>English, Cantonese</i></p>
+                <p>CLASS SECTION</p>
+                <p><i>NFF</i></p>
+                <p>STUDENT ID</p>
+                <p><i>046435038</i></p>
+                <p>INSTRUCTOR</p>
+                <p><i>Mark Merritt</i></p>
+            </div>
+        </div>
+
+        <!--Education Card-->
+        <div id="education">
+            <div id="high-school-education" class="education-card">
+                <div class="education-left">
+                    <div class="education-years">
+                        <p>2010-2014</p>
+                    </div>
+                    <div class="education-type">
+                        <h4>High School Diploma</h4>
+                    </div>
+                </div>
+                <div class="education-right">
+                    <p>Graduated with Administrator's Honours and Business Certificate</p>
+                </div>
+            </div>
+            <div id="college-education" class="education-card">
+                <div class="education-left">
+                    <div class="education-years">
+                        <p>2022</p>
+                    </div>
+                    <div class="education-type">
+                        <h4>Baking Pre-Employment</h4>
+                    </div>
+                </div>
+                <div class="education-right">
+                    <p>Graduated culinary school with specialty in baking and pastry</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Contact Me Form-->
+        <div id="contact-form">
+            <h2>Contact Me</h2>
+            <form action="https://httpbin.org/post" method="POST">
+                <!--Name-->
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="on" placeholder="(required)" required>
+                <p></p>
+
+                <!--Email-->
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" autocomplete="on" placeholder="(required)" required>
+                <p></p>
+
+                <!--Address-->
+                <label for="address">Address</label>
+                <input id="address" name="address" type="text" autocomplete="on" placeholder="(required)" required>
+                <p></p>
+
+                <!--Date (additional input)-->
+                <label for="date">Date</label>
+                <input id="date" name="date" autocomplete="on" type="date" placeholder="(required)" required>
+                <p></p>
+
+                <!--City-->
+                <label for="city">City</label>
+                <input list="city" name="city" type="text" autocomplete="on" placeholder="(required)" required>
+                <datalist id="city">
+                    <option value="Toronto"></option>
+                    <option value="Montreal"></option>
+                    <option value="Vancouver"></option>
+                    <option value="Calgary"></option>
+                    <option value="Ottawa"></option>
+                </datalist>
+                <p></p>
+
+                <!--Postal Code-->
+                <label for="postal-code">Postal Code</label>
+                <input id="postal-code" name="postal-code" type="text" pattern="^[A-Za-z]\d[A-Za-z][ ]?\d[A-Za-z]\d$" placeholder="e.g. A1A 1A1" required>
+                <p></p>
+
+                <!--Contact Reason-->
+                <h3>Reason for Contact</h3>
+                <div id="contact-reasons">
+                    <label for="reason-hiring">Hiring</label>
+                    <input id="reason-hiring" name="reason" type="radio" value="hiring" checked="true">
+                    <p></p>
+                    <label for="reason-question">Question</label>
+                    <input id="reason-question" name="reason" type="radio" value="question">
+                    <p></p>
+                    <label for="reason-comment">Comment</label>
+                    <input id="reason-comment" name="reason" type="radio" value="comment">
+                    <p></p>
+                    <!--Hourly Rate-->
+                    <div id="rate">
+                        <label for="hourly-rate">Hourly Rate</label>
+                        <input id="hourly-rate" name="hourly-rate" type="number">
+                    </div>
+                    <p></p>
+                </div>
+
+                <!--Additional Message-->
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+                <p></p>
+
+                <!--Submit button-->
+                <p></p>
+                <div id="submit-reset-buttons">
+                    <input class="form-button" type="submit" name="submit" value="Submit">
+                    <input class="form-button" type="reset" name="Reset" value="Reset">
+                </div>
+            </div>
+        </form>
+        <script src="./js/app.js"></script>
+    </body>
+</html>
